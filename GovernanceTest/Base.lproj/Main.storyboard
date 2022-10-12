@@ -1,32 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VYg-jU-NAq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Drawer View Controller-->
+        <scene sceneID="abI-Kq-DlO">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GovernanceTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="VYg-jU-NAq" customClass="DrawerViewController" customModule="GovernanceTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R9g-lF-2jo"/>
+                        <viewControllerLayoutGuide type="bottom" id="dlG-l8-buF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hoF-b6-fjW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MQY-t0-Ss0" userLabel="MainImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jmp-zS-Epd" userLabel="TempImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1m-lT-Xdr">
+                                <rect key="frame" x="76" y="762" width="28" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Ugc-O1-NvH"/>
+                                    <constraint firstAttribute="width" constant="28" id="j8Q-C5-g7t"/>
+                                </constraints>
+                                <state key="normal" image="Red">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pencilPressed:" destination="VYg-jU-NAq" eventType="touchUpInside" id="9q1-RG-MfC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REi-GB-Yj0">
+                                <rect key="frame" x="48" y="762" width="28" height="100"/>
+                                <state key="normal" image="Blue">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pencilPressed:" destination="VYg-jU-NAq" eventType="touchUpInside" id="ngN-8P-WoR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6i-2p-vtb">
+                                <rect key="frame" x="20" y="762" width="28" height="100"/>
+                                <state key="normal" image="DarkGreen">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pencilPressed:" destination="VYg-jU-NAq" eventType="touchUpInside" id="Ncz-fR-OqQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jJ-oh-VTa">
+                                <rect key="frame" x="187.5" y="54" width="39" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetPressed:" destination="VYg-jU-NAq" eventType="touchUpInside" id="Xjv-Sf-wvo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cU-Wo-AZf">
+                                <rect key="frame" x="104" y="762" width="28" height="100"/>
+                                <state key="normal" image="Eraser">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pencilPressed:" destination="VYg-jU-NAq" eventType="touchUpInside" id="G3G-yM-2NL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ddu-a7-nRg"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i6i-2p-vtb" firstAttribute="bottom" secondItem="Ddu-a7-nRg" secondAttribute="bottom" id="16a-N4-Oin"/>
+                            <constraint firstItem="MQY-t0-Ss0" firstAttribute="leading" secondItem="hoF-b6-fjW" secondAttribute="leading" id="2Df-cz-Ebd"/>
+                            <constraint firstItem="i6i-2p-vtb" firstAttribute="height" secondItem="REi-GB-Yj0" secondAttribute="height" id="5mr-k1-bdZ"/>
+                            <constraint firstItem="B1m-lT-Xdr" firstAttribute="leading" secondItem="hoF-b6-fjW" secondAttribute="leadingMargin" constant="56" id="8Fd-aG-szc"/>
+                            <constraint firstItem="REi-GB-Yj0" firstAttribute="width" secondItem="B1m-lT-Xdr" secondAttribute="width" id="970-U9-xNm"/>
+                            <constraint firstItem="REi-GB-Yj0" firstAttribute="leading" secondItem="B1m-lT-Xdr" secondAttribute="trailing" constant="-56" id="9Ut-hj-5yz"/>
+                            <constraint firstItem="0cU-Wo-AZf" firstAttribute="width" secondItem="i6i-2p-vtb" secondAttribute="width" id="9dX-xI-QxR"/>
+                            <constraint firstItem="i6i-2p-vtb" firstAttribute="width" secondItem="REi-GB-Yj0" secondAttribute="width" id="DVr-d2-oMC"/>
+                            <constraint firstAttribute="trailing" secondItem="MQY-t0-Ss0" secondAttribute="trailing" id="LCp-Ar-rRH"/>
+                            <constraint firstItem="0cU-Wo-AZf" firstAttribute="leading" secondItem="i6i-2p-vtb" secondAttribute="trailing" constant="56" id="OOo-sB-Hos"/>
+                            <constraint firstAttribute="bottom" secondItem="MQY-t0-Ss0" secondAttribute="bottom" id="OQe-Iw-0Jq"/>
+                            <constraint firstItem="REi-GB-Yj0" firstAttribute="height" secondItem="B1m-lT-Xdr" secondAttribute="height" id="TOD-Gg-8P4"/>
+                            <constraint firstItem="Jmp-zS-Epd" firstAttribute="top" secondItem="hoF-b6-fjW" secondAttribute="top" id="VaR-bX-odM"/>
+                            <constraint firstItem="0cU-Wo-AZf" firstAttribute="bottom" secondItem="Ddu-a7-nRg" secondAttribute="bottom" id="cDh-a1-ACa"/>
+                            <constraint firstItem="REi-GB-Yj0" firstAttribute="bottom" secondItem="Ddu-a7-nRg" secondAttribute="bottom" id="cb3-G5-nPU"/>
+                            <constraint firstAttribute="trailing" secondItem="Jmp-zS-Epd" secondAttribute="trailing" id="eCw-II-R1X"/>
+                            <constraint firstAttribute="bottom" secondItem="Jmp-zS-Epd" secondAttribute="bottom" id="gP6-bI-4FT"/>
+                            <constraint firstItem="0cU-Wo-AZf" firstAttribute="height" secondItem="i6i-2p-vtb" secondAttribute="height" id="hba-uG-UgM"/>
+                            <constraint firstItem="B1m-lT-Xdr" firstAttribute="bottom" secondItem="Ddu-a7-nRg" secondAttribute="bottom" id="mLx-3T-e5d"/>
+                            <constraint firstItem="7jJ-oh-VTa" firstAttribute="centerX" secondItem="hoF-b6-fjW" secondAttribute="centerX" id="qMG-MZ-NrO"/>
+                            <constraint firstItem="MQY-t0-Ss0" firstAttribute="top" secondItem="hoF-b6-fjW" secondAttribute="top" id="udD-fp-Ibn"/>
+                            <constraint firstItem="i6i-2p-vtb" firstAttribute="leading" secondItem="REi-GB-Yj0" secondAttribute="trailing" constant="-56" id="vfA-Yq-2DA"/>
+                            <constraint firstItem="Jmp-zS-Epd" firstAttribute="leading" secondItem="hoF-b6-fjW" secondAttribute="leading" id="wQW-Hc-Dph"/>
+                            <constraint firstItem="7jJ-oh-VTa" firstAttribute="top" secondItem="Ddu-a7-nRg" secondAttribute="top" constant="10" id="zFp-O8-eYq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bluePencilButton" destination="REi-GB-Yj0" id="wip-Bf-9DA"/>
+                        <outlet property="bluePencilButtonConstraint" destination="cb3-G5-nPU" id="UbZ-o4-cHZ"/>
+                        <outlet property="erasePencilButton" destination="0cU-Wo-AZf" id="wH8-tf-rgs"/>
+                        <outlet property="erasePencilButtonConstraint" destination="cDh-a1-ACa" id="z70-Vu-ouW"/>
+                        <outlet property="greenPencilButton" destination="i6i-2p-vtb" id="Gg3-UU-MC1"/>
+                        <outlet property="greenPencilButtonConstraint" destination="16a-N4-Oin" id="gtG-VQ-pP2"/>
+                        <outlet property="mainImageView" destination="MQY-t0-Ss0" id="Rn4-uh-F4A"/>
+                        <outlet property="redPencilButton" destination="B1m-lT-Xdr" id="ZGS-wM-537"/>
+                        <outlet property="redPencilButtonConstraint" destination="mLx-3T-e5d" id="8Oj-ri-FN7"/>
+                        <outlet property="tempImageView" destination="Jmp-zS-Epd" id="veO-hm-h6e"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmE-Ov-P2I" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="94"/>
+            <point key="canvasLocation" x="-714.49275362318849" y="93.75"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="Blue" width="53" height="332"/>
+        <image name="DarkGreen" width="53" height="332"/>
+        <image name="Eraser" width="55" height="167"/>
+        <image name="Red" width="53" height="332"/>
     </resources>
 </document>
