@@ -20,7 +20,7 @@ class DrawerViewController: UIViewController {
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var tempImageView: UIImageView!
 
-    private var pencil: Pencil = .darkGreen
+    private var pencil: Pencil = .green
     private var brushWidth: CGFloat = 10.0
     private var opacity: CGFloat = 1.0
     
@@ -132,9 +132,9 @@ extension DrawerViewController {
         case redPencilButton:
             return .red
         case bluePencilButton:
-            return .darkBlue
+            return .blue
         case greenPencilButton:
-            return .darkGreen
+            return .green
         case erasePencilButton:
             return .eraser
         default:
@@ -154,14 +154,14 @@ extension DrawerViewController {
                 greenPencilButtonConstraint,
                 erasePencilButtonConstraint
             ]
-        case .darkBlue:
+        case .blue:
             selectedConstraint = bluePencilButtonConstraint
             defaultConstraints = [
                 redPencilButtonConstraint,
                 greenPencilButtonConstraint,
                 erasePencilButtonConstraint
             ]
-        case .darkGreen:
+        case .green:
             selectedConstraint = greenPencilButtonConstraint
             defaultConstraints = [
                 redPencilButtonConstraint,
